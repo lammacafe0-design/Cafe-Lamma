@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Café Lamma</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #f9f6f2;
+      color: #4b3b30;
+      scroll-behavior: smooth;
+    }
+    header {
+      background-color: #d8b4a0;
+      color: white;
+      padding: 1.5rem;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+    }
+    .logo-placeholder {
+      width: 60px;
+      height: 60px;
+      background-color: rgba(255,255,255,0.2);
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      color: white;
+    }
+    nav a {
+      margin: 0 15px;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #ffe4e1;
+    }
+    section {
+      padding: 50px;
+      text-align: center;
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 1s ease-out, transform 1s ease-out;
+    }
+    section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .hero {
+      background-image: url('https://images.unsplash.com/photo-1504754524776-8f4f37790ca0');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      height: 80vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 10px 20px;
+      border-radius: 15px;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 10px 20px;
+      border-radius: 15px;
+    }
+    footer {
+      background-color: #d8b4a0;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+    }
+    .contact-links a {
+      color: #4b3b30;
+      text-decoration: none;
+      margin: 0 10px;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+    .contact-links a:hover {
+      color: #d2691e;
+    }
+    .gallery img {
+      width: 250px;
+      height: 180px;
+      object-fit: cover;
+      margin: 10px;
+      border-radius: 10px;
+      transition: transform 0.3s;
+    }
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+    iframe {
+      border: none;
+      width: 80%;
+      height: 300px;
+      border-radius: 10px;
+    }
+    @media (max-width: 600px) {
+      .gallery img { width: 90%; height: auto; }
+      iframe { width: 95%; }
+      header { flex-direction: column; gap: 0.5rem; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <!-- Logo placeholder: replace src with your logo file when ready -->
+    <div class="logo-placeholder">Logo</div>
+    <div>
+      <h1 style="margin:0">Café Lamma</h1>
+      <nav style="margin-top:8px">
+        <a href="#accueil">Accueil</a>
+        <a href="#menu">Menu</a>
+        <a href="#galerie">Galerie</a>
+        <a href="#apropos">À propos</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <section id="accueil" class="hero">
+    <h1>Bienvenue au Café Lamma</h1>
+    <p>Un lieu chaleureux et inspirant, créé par des femmes, pour toutes les femmes.</p>
+  </section>
+
+  <section id="menu">
+    <h2>Notre Menu</h2>
+    <p>Dégustez nos cafés, thés, desserts et plats légers, préparés avec amour et passion.</p>
+  </section>
+
+  <section id="galerie" class="gallery">
+    <h2>Galerie</h2>
+    <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348" alt="Café intérieur" />
+    <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93" alt="Tasse de café" />
+    <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4" alt="Terrasse café" />
+  </section>
+
+  <section id="apropos">
+    <h2>À propos de nous</h2>
+    <p>Café Lamma est bien plus qu’un café : c’est un espace de partage, de créativité et de sérénité. Un lieu où chaque femme se sent libre, inspirée et accueillie.</p>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <div class="contact-links">
+      <p>📞 Téléphone : <a href="tel:+212600000000">+212 600 000 000</a></p>
+      <p>📧 Email : <a href="mailto:lammacafe0@gmail.com">lammacafe0@gmail.com</a></p>
+      <p>📸 Instagram : <a href="https://www.instagram.com/lammacafe0?igsh=MTV2aWE3MGkxc3M5YQ==" target="_blank">@lammacafe0</a></p>
+      <p>📍 Localisation : Laâyoune, Avenue Smara, Maroc</p>
+      <!-- Replace YOUR_API_KEY with a valid Google Maps Embed API key to make the map work -->
+      <iframe src="https://www.google.com/maps/embed/v1/place?key=YOUR_API_KEY&q=Avenue+Smara,Laayoune,Maroc" allowfullscreen></iframe>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Café Lamma | Site web créé avec amour 💕</p>
+  </footer>
+
+  <script>
+    const sections = document.querySelectorAll('section');
+    window.addEventListener('scroll', () => {
+      sections.forEach(section => {
+        const rect = section.getBoundingClientRect();
+        if(rect.top < window.innerHeight - 100) {
+          section.classList.add('visible');
+        }
+      });
+    });
+    // Smooth scroll for nav links
+    document.querySelectorAll('nav a').forEach(a => {
+      a.addEventListener('click', e => {
+        e.preventDefault();
+        document.querySelector(a.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+  </script>
+</body>
+</html>
